@@ -1,0 +1,26 @@
+# API Root
+GET http://localhost:3000
+
+###
+# Get all Gmail messages with pagination
+GET http://localhost:3000/api/gmail?limit=2&offset=0
+
+###
+# Get Gmail messages with different pagination
+GET http://localhost:3000/api/gmail?limit=5&offset=1
+
+###
+# Get a specific Gmail message by ID
+GET http://localhost:3000/api/gmail/1
+
+###
+# Get all Calendar events with pagination
+GET http://localhost:3000/api/calendar?limit=2&offset=0
+
+###
+# Get Calendar events with different pagination
+GET http://localhost:3000/api/calendar?limit=5&offset=5
+
+###
+# Get a specific Calendar event by ID
+GET http://localhost:3000/api/calendar/1

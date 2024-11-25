@@ -1,0 +1,721 @@
+{
+  "gmail": [
+    {
+      "id": "192b2fd3569170da",
+      "payload": {
+        "body": {
+          "data": "DQoNCg0KVGhhbmtzLg0KcmF6YW4NClNhbGVzIEhlYWQNCjkzODQ1NDU0MTANCg==",
+          "size": 46
+        },
+        "partId": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Received",
+            "value": "by 2002:a0c:c583:0:b0:6b5:fe18:5320 with SMTP id a3csp2794927qvj;        Mon, 21 Oct 2024 23:49:51 -0700 (PDT)"
+          },
+          {
+            "name": "X-Google-Smtp-Source",
+            "value": "AGHT+IEHcFEVjiBNk1wHDyPMeZ0RIgLqVL5yZUpq/GD4ph/CxLnntQVyrpugwBocSBFVE/fp5rD9"
+          },
+          {
+            "name": "X-Received",
+            "value": "by 2002:ac8:5046:0:b0:461:1bb:4d14 with SMTP id d75a77b69052e-46101bb4f3bmr16136281cf.21.1729579791623;        Mon, 21 Oct 2024 23:49:51 -0700 (PDT)"
+          },
+          {
+            "name": "ARC-Seal",
+            "value": "i=1; a=rsa-sha256; t=1729579791; cv=none;        d=google.com; s=arc-20240605;        b=Z/+DIBBTlQuoH75yBcSpdVG902nI8XqgYpsGzbg5M/Lz5y/r4MWhH7S8kUgg5IjEvp         ve0u/U2WMhheJ3J7TdcABZaqdtrBHi8ZzbxDwGWemQwTRpVvISt2HzKtT1+RKPxMYJzY         1pBjciuXCyKfU5FcaEw9mYh5NmTz1hwm+fnRZHC+Im4OAXtK7+Wh1eyEBf3Ue/CgSe9w         fEZAt0LCDNE6n2A3N6RIuVtn9wMzNUV3G/jKdjLJBFUbIX+EIE2vJG8qeZX+GuGtMwvQ         Af7YBuSkWi0SjwcaJDbxDaKDzrvKogD8V/1ZuKoX6frmRTNi1kRiDv8Sdcod1FH4s5c/         pAUw=="
+          },
+          {
+            "name": "ARC-Message-Signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=mime-version:date:content-transfer-encoding:message-id:subject:to         :from;        bh=afbFpZM4xskxSqGzug5cKnqAbshvsC1sm0HX8lyB+7I=;        fh=oFe+ZuFHSbI9P/pIoxeJFdgyDkWA/lr3IcxwH6xa+Wg=;        b=Cps4cokcthsAOouq8okXwoixjbm+hUKQnu/seIY97WaVwY4LxxuTU/OK7ugVmNxRdB         Vvr/X7HDghQJBTjtpyHMx4Y4eAmoCvVor3YhoLT3Ljh3lkx7s/TZ6btOcpPhL+QkII2Q         MqiniFGxxElkqXkdz3zUF6AhOBzpBeSoBX3XOIWOgBGNucMlsaxcURz3K79dRgwz2n6n         VzbJKcynIc+t679l0+Sc8vweLLxo/Axt3DgMAiOwE158f+y0i60L/0M6qVUhvOPnqeiA         grrxt8XURbC2q4rmRTjI88xTaw3ssFnr99bCndo4MLMEIMKW35FQTJ3FSgSMjW/ABXXN         CRLQ==;        dara=google.com"
+          },
+          {
+            "name": "ARC-Authentication-Results",
+            "value": "i=1; mx.google.com;       spf=softfail (google.com: domain of transitioning razan@vinaora.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=razan@vinaora.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<razan@vinaora.com>"
+          },
+          {
+            "name": "Received",
+            "value": "from dark-knight.nektar.ai (dark-knight.nektar.ai. [44.216.162.252])        by mx.google.com with ESMTPS id d75a77b69052e-460d3d5b247si56532791cf.592.2024.10.21.23.49.51        for <minato@nektar.ai>        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Mon, 21 Oct 2024 23:49:51 -0700 (PDT)"
+          },
+          {
+            "name": "Received-SPF",
+            "value": "softfail (google.com: domain of transitioning razan@vinaora.com does not designate 44.216.162.252 as permitted sender) client-ip=44.216.162.252;"
+          },
+          {
+            "name": "Authentication-Results",
+            "value": "mx.google.com;       spf=softfail (google.com: domain of transitioning razan@vinaora.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=razan@vinaora.com"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "name": "From",
+            "value": "razan@vinaora.com"
+          },
+          {
+            "name": "To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Subject",
+            "value": "account 1  minato incoming mail rc oct 22nd"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<c3f5c93e-0cd6-3544-db15-5891359a586c@vinaora.com>"
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "7bit"
+          },
+          {
+            "name": "Date",
+            "value": "Tue, 22 Oct 2024 06:49:51 +0000"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          }
+        ],
+        "filename": "",
+        "mimeType": "text/plain"
+      },
+      "snippet": "Thanks. razan Sales Head 9384545410",
+      "subject": "account 1  minato incoming mail rc oct 22nd",
+      "labelIds": ["UNREAD", "CATEGORY_PERSONAL", "INBOX"],
+      "threadId": "192b2fd3569170da",
+      "historyId": "2268101",
+      "internalDate": "1729579791000",
+      "sizeEstimate": 2966
+    },
+    {
+      "id": "19265370b0fcb394",
+      "payload": {
+        "body": {
+          "data": "aGVsbG8sDQoNClRoaXMgaXMgdGVzdCBtYWlsLg0KDQoNClRoYW5rcy4NCg0KbmFtDQpQcm9kdWN0IEhlYWQNCjkwODA5MDgwOTANCg==",
+          "size": 76
+        },
+        "partId": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Received",
+            "value": "by 2002:a0c:f64b:0:b0:6b5:fe18:5320 with SMTP id s11csp1660459qvm;        Sun, 6 Oct 2024 21:22:39 -0700 (PDT)"
+          },
+          {
+            "name": "X-Google-Smtp-Source",
+            "value": "AGHT+IFeQ0JLxJRiU4o/++FIqdA3W+9VU7sqHC4osA6iA9+w7bGpCF6ZRlVFZLbQq4oARF56IiG0"
+          },
+          {
+            "name": "X-Received",
+            "value": "by 2002:a05:622a:11d2:b0:458:3148:9a50 with SMTP id d75a77b69052e-45d9bb4504emr153396411cf.51.1728274958950;        Sun, 06 Oct 2024 21:22:38 -0700 (PDT)"
+          },
+          {
+            "name": "ARC-Seal",
+            "value": "i=1; a=rsa-sha256; t=1728274958; cv=none;        d=google.com; s=arc-20240605;        b=Z1O0pHKH6E6xZvQBdSwFbUZoQFu8R59FWp2o+ZfOQx9s9vJb8+hiTUDM42857jk8/o         O33Ec8wyBfLMxDAqzOFRJKZb5qABdCxG4DZIr3Z93MXRjFRoyWmNgK8MumYyYCztP9pn         urWYIlJJZ8977iBKA8CP5jyW99hpxRu1zy7iatK4K0egex7M45NJdtkqOdlUopzhfN+L         6cjad74N9uQ7SxW4P/aoEVyuA1ozPy9d/aIyRto2T/mqD7nHHwtFvCTo9Fy7lTsmWsX9         T6UlPAoNhv1tfWQQbiMmwAHg3F+x1DU8fLqtS2gdBPZIr93lVGe6HXXfDmuQd3uyseQr         LQuQ=="
+          },
+          {
+            "name": "ARC-Message-Signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=mime-version:date:content-transfer-encoding:message-id:subject:to         :from;        bh=VvZxXTIe6In5cTI52ZzlKmJE27vdrHOyPKRXeGe+K1E=;        fh=oFe+ZuFHSbI9P/pIoxeJFdgyDkWA/lr3IcxwH6xa+Wg=;        b=Jiw78WmranzIXqNOGDcpYjxQOk/0t/T/7L8l+hxVa8eHDDE9LDV23XNlONKMRaLD7H         xhVKLBpl7ay+hZG+gmsa8hkIIRY9JBCTCd/Bzh2B+E0FlnRIIQH8wsKANqRXDGEDTeAv         fCCKsjgoFzjiffrOXSr0vshZnw8C49LbsHoRBfHYi1j0JYX0okoszn7jTdkcRXp0a0ka         uWku0z7FOT324koZz+7/SFAfSOJSxK1qpa/DPcCmVXA8uBTFUmyhkGA8QnsamxIMR+/h         s5Ty4E/FtYIvON6xpZfbm4k5ptTlZFVexh1gJy6A6D7YS9WFQK9Zq5lsuTcMCL9RLegT         WC7g==;        dara=google.com"
+          },
+          {
+            "name": "ARC-Authentication-Results",
+            "value": "i=1; mx.google.com;       spf=fail (google.com: domain of nam@metro.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=nam@metro.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<nam@metro.com>"
+          },
+          {
+            "name": "Received",
+            "value": "from dark-knight.nektar.ai (dark-knight.nektar.ai. [44.216.162.252])        by mx.google.com with ESMTPS id d75a77b69052e-45dae97becesi38908801cf.473.2024.10.06.21.22.38        for <minato@nektar.ai>        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Sun, 06 Oct 2024 21:22:38 -0700 (PDT)"
+          },
+          {
+            "name": "Received-SPF",
+            "value": "fail (google.com: domain of nam@metro.com does not designate 44.216.162.252 as permitted sender) client-ip=44.216.162.252;"
+          },
+          {
+            "name": "Authentication-Results",
+            "value": "mx.google.com;       spf=fail (google.com: domain of nam@metro.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=nam@metro.com"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "name": "From",
+            "value": "nam@metro.com"
+          },
+          {
+            "name": "To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Subject",
+            "value": "Nam test gmail sync"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<afa44035-9c1e-0b5d-e2fb-3875475e7d04@metro.com>"
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "7bit"
+          },
+          {
+            "name": "Date",
+            "value": "Mon, 07 Oct 2024 04:22:38 +0000"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          }
+        ],
+        "filename": "",
+        "mimeType": "text/plain"
+      },
+      "snippet": "hello, This is test mail. Thanks. nam Product Head 9080908090",
+      "subject": "Nam test gmail sync",
+      "labelIds": ["UNREAD", "IMPORTANT", "CATEGORY_PERSONAL", "INBOX"],
+      "threadId": "19265370b0fcb394",
+      "historyId": "2199800",
+      "internalDate": "1728274958000",
+      "sizeEstimate": 2893
+    },
+    {
+      "id": "1922349b0e518e91",
+      "payload": {
+        "body": {
+          "data": "aGVsbG8sDQoNClRoaXMgaXMgdGVzdCBtYWlsLg0KDQpUaGFua3MuDQoNCmppaw0KQ3VzdG9tZXIgSGVhZA0KOTA4MDkwODA5MA0K",
+          "size": 75
+        },
+        "partId": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "minato@nektartest.page"
+          },
+          {
+            "name": "Received",
+            "value": "by 2002:a0c:da88:0:b0:6b5:fe18:5320 with SMTP id z8csp222304qvj;        Tue, 24 Sep 2024 02:08:05 -0700 (PDT)"
+          },
+          {
+            "name": "X-Google-Smtp-Source",
+            "value": "AGHT+IFtAnyteqURHqM8fM7STc3wTJAiTUCVPIrLQRp7Pj6j+qvQBUzOHI4VsZb5U9soV9jzu5li"
+          },
+          {
+            "name": "X-Received",
+            "value": "by 2002:a05:622a:4e93:b0:456:6203:e582 with SMTP id d75a77b69052e-45b226c4392mr212006351cf.14.1727168885242;        Tue, 24 Sep 2024 02:08:05 -0700 (PDT)"
+          },
+          {
+            "name": "ARC-Seal",
+            "value": "i=1; a=rsa-sha256; t=1727168885; cv=none;        d=google.com; s=arc-20240605;        b=CKLhSscaaT11Lluxbj/4kMoYjFw+hA8vrHS7kEJX6uKnLiwzvFyxZ6XDm9FXIfTAJo         X9tpFZd7mqaZfvUgEk9Rdypzak7Pdtt6UtwpFa4wuPf7mspeZWmzrnvcM8cSwfpAqREI         JHt5l1bQxVeCg0/kYQ6N20J9oItYGPllNEcn9AfLYsAsAfZ+GGzlSUD4683dBlKvZRvx         6QIDjT9Ny3EIZp7qtHNO4seENytSwDY6uIr5oucoBznHZMJAHk/PK7Nu2vlEzi1LzxIX         zuGOT96VRNHvcZi69hu5bxWRP6adpQ+1vrPUvmbowBKKgHrcgqZFVnASE5dHgz/vlwUF         VRRw=="
+          },
+          {
+            "name": "ARC-Message-Signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=mime-version:date:content-transfer-encoding:message-id:subject:to         :from;        bh=xlFCVcLPbhcmocU1XOZ4wRen6bLAnnLKgPTarmtIKZU=;        fh=oFe+ZuFHSbI9P/pIoxeJFdgyDkWA/lr3IcxwH6xa+Wg=;        b=XzBUn/AQ+Izw8Baraqtn8aq5KwLcHbdMcqtUsg7rXJ0B/tnCMcvhQnplTWt4w19KPN         fAN3SqQTiztsxPQlp2f6mWurZtoyCiLll74gU1HY6nmcZcHWEhYh/6eqKCx15j/mKuSz         eCsbQ6BS5IMRqdF8gB//tyNtPVDAqRb2yhmxCbAugCtVG5hSSUdd6SptXo5Wzp5lMHCe         DYzUKrcPBSvOuJXAAg5goDoGy4AlWIxZNJ4kZ20uuAF5nS2iLqkIi9YTXykVnUNt8Dkf         G0oljnU3vX41khAMX96+7HEcziW/wbruBAAFU7l/mv42rI8pncXoufO+Q0QDB65cVy1p         FWng==;        dara=google.com"
+          },
+          {
+            "name": "ARC-Authentication-Results",
+            "value": "i=1; mx.google.com;       spf=softfail (google.com: domain of transitioning jik@med.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=jik@med.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<jik@med.com>"
+          },
+          {
+            "name": "Received",
+            "value": "from dark-knight.nektar.ai (dark-knight.nektar.ai. [44.216.162.252])        by mx.google.com with ESMTPS id d75a77b69052e-45b526e8090si11551401cf.474.2024.09.24.02.08.04        for <minato@nektartest.page>        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Tue, 24 Sep 2024 02:08:04 -0700 (PDT)"
+          },
+          {
+            "name": "Received-SPF",
+            "value": "softfail (google.com: domain of transitioning jik@med.com does not designate 44.216.162.252 as permitted sender) client-ip=44.216.162.252;"
+          },
+          {
+            "name": "Authentication-Results",
+            "value": "mx.google.com;       spf=softfail (google.com: domain of transitioning jik@med.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=jik@med.com"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "name": "From",
+            "value": "jik@med.com"
+          },
+          {
+            "name": "To",
+            "value": "minato@nektartest.page"
+          },
+          {
+            "name": "Subject",
+            "value": "med incoming mail -- cont"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<a78c3073-7c39-e10b-c529-f2b82876f8ff@med.com>"
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "7bit"
+          },
+          {
+            "name": "Date",
+            "value": "Tue, 24 Sep 2024 09:08:04 +0000"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          }
+        ],
+        "filename": "",
+        "mimeType": "text/plain"
+      },
+      "snippet": "hello, This is test mail. Thanks. jik Customer Head 9080908090",
+      "subject": "med incoming mail -- cont",
+      "labelIds": ["IMPORTANT", "CATEGORY_PERSONAL", "INBOX"],
+      "threadId": "192b2fd3569170da",
+      "historyId": "2175514",
+      "internalDate": "1727168884000",
+      "sizeEstimate": 2935
+    },
+    {
+      "id": "191950cc400251dc",
+      "payload": {
+        "body": {
+          "data": "aGVsbG8sDQoNClRoaXMgaXMgdGVzdCBtYWlsLg0KDQpUaGFua3MuDQoNCnphaw0KUHJvZHVjdCBIZWFkDQo5MDgwOTA4MDkwDQo=",
+          "size": 74
+        },
+        "partId": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "minato@nektartest.page"
+          },
+          {
+            "name": "Received",
+            "value": "by 2002:a05:6214:1a4e:b0:6b5:fe18:5320 with SMTP id fi14csp400195qvb;        Tue, 27 Aug 2024 11:15:28 -0700 (PDT)"
+          },
+          {
+            "name": "X-Google-Smtp-Source",
+            "value": "AGHT+IGnMqDMdkyUr3aazBdLnLx2mImjwsW8XAD05nhoRwPCAnn5LaPO+nVbbNlIuNfF/qzjrpsb"
+          },
+          {
+            "name": "X-Received",
+            "value": "by 2002:a05:6359:4589:b0:1b5:a136:86b1 with SMTP id e5c5f4694b2df-1b5ec04f45fmr403846455d.20.1724782527998;        Tue, 27 Aug 2024 11:15:27 -0700 (PDT)"
+          },
+          {
+            "name": "ARC-Seal",
+            "value": "i=1; a=rsa-sha256; t=1724782527; cv=none;        d=google.com; s=arc-20160816;        b=fR4bfMrABwabgq7HeRCXAf8gm0Wu3Wzr/pCyF10g9oS6RZV3V88I2U8sU8XQfiZ0Ce         PYsxD3Eawx2pFZOWvIohQwVdEGrTN6IAHxa2o984G/hIfSgJLdfb6ZyBD3Y9MS/r89t7         ysbYppF9XuTja9H20OAxsT2s/+b/tReLgklwq2Z8WcSzBsw1xQ8CQTI3Truo2TurSChC         El4VkZeaqxWGYYlepGyusyAGKNEqxJbZXhrDymbECYr1zWWF3cRrUa9Pm4mpU+ATT6z8         NqPsudfpAWVBrADjiEDWSo85fh7fe6yf9fU7DPwX+MlhrbWPUhNMRzYsL1R+nG3DLxNg         VAAg=="
+          },
+          {
+            "name": "ARC-Message-Signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=mime-version:date:content-transfer-encoding:message-id:subject:to         :from;        bh=pLDulH4r505LizcAKpw58qC20kKmoFUe2G9LOqKlvjA=;        fh=opJtjDO70XC3wYg/tGudwWlXfRpuvT0BzptLTq9eVg8=;        b=QKrdY6UThc2dGosEggAoI8usDQ/LQ1aP5dKRP8so9qJSqEIH3ho3oEix5vQUZTD43Y         OH2tC1emmb7PQubArZpBIZYAi61OsSfYQLynPaNApL14iTy3AqhanigFAJqMzTrgLWBy         HTBHyFcYHUfmQv/kC0u+r5OuMcHhPz2EHE+QVcapwNuz6fw1mcoadlaPw1ThfPaH1IgL         vj3cO7ZUv+hba13SPVxOCA0HJL0dBZfHFkQKNFCqONG30pjv0bDYcf+XOVRjzQ3ZHkzI         DNn2EjrpiPn1vaM2l5JwLyRNpLZcHLC1de2TBnp6jE+131FLffz0ANQQTC6ZaYJRPvy2         mtyA==;        dara=google.com"
+          },
+          {
+            "name": "ARC-Authentication-Results",
+            "value": "i=1; mx.google.com;       spf=fail (google.com: domain of zak@mp.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=zak@mp.com;       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=mp.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<zak@mp.com>"
+          },
+          {
+            "name": "Received",
+            "value": "from dark-knight.nektar.ai (dark-knight.nektar.ai. [44.216.162.252])        by mx.google.com with ESMTPS id a1e0cc1a2514c-844ce58772asi3134764241.147.2024.08.27.11.15.27        for <minato@nektartest.page>        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Tue, 27 Aug 2024 11:15:27 -0700 (PDT)"
+          },
+          {
+            "name": "Received-SPF",
+            "value": "fail (google.com: domain of zak@mp.com does not designate 44.216.162.252 as permitted sender) client-ip=44.216.162.252;"
+          },
+          {
+            "name": "Authentication-Results",
+            "value": "mx.google.com;       spf=fail (google.com: domain of zak@mp.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=zak@mp.com;       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=mp.com"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "name": "From",
+            "value": "zak@mp.com"
+          },
+          {
+            "name": "To",
+            "value": "minato@nektartest.page, jill@buck.com, johny@hexa.com"
+          },
+          {
+            "name": "Subject",
+            "value": "mp MIXED mail 4"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<7f37ce82-f953-9c0c-27d7-2292f7988574@mp.com>"
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "7bit"
+          },
+          {
+            "name": "Date",
+            "value": "Tue, 27 Aug 2024 18:15:27 +0000"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          }
+        ],
+        "filename": "",
+        "mimeType": "text/plain"
+      },
+      "snippet": "hello, This is test mail. Thanks. zak Product Head 9080908090",
+      "subject": "mp MIXED mail 4",
+      "labelIds": ["IMPORTANT", "CATEGORY_PERSONAL", "INBOX"],
+      "threadId": "191950cc400251dc",
+      "historyId": "2005951",
+      "internalDate": "1724782527000",
+      "sizeEstimate": 3027
+    },
+    {
+      "id": "1926550205adf771",
+      "payload": {
+        "body": {
+          "data": "SGkgdGhpcyBpcyB0ZXN0aW5nDQoNCnRoYW5rcw0KDQpjdXANCjEyMzQ1Njc4OTANCg==",
+          "size": 49
+        },
+        "partId": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Received",
+            "value": "by 2002:a0c:f64b:0:b0:6b5:fe18:5320 with SMTP id s11csp1666922qvm;        Sun, 6 Oct 2024 21:50:03 -0700 (PDT)"
+          },
+          {
+            "name": "X-Google-Smtp-Source",
+            "value": "AGHT+IHxHPgJxh/5t+Fmca+FPVxgtWpXX2Yo+VzgsVMM59K+h691MVtx28KhuoGO/lqfnlgdRXsx"
+          },
+          {
+            "name": "X-Received",
+            "value": "by 2002:a05:6214:5243:b0:6cb:6059:92a with SMTP id 6a1803df08f44-6cb9a330786mr167803766d6.10.1728276603302;        Sun, 06 Oct 2024 21:50:03 -0700 (PDT)"
+          },
+          {
+            "name": "ARC-Seal",
+            "value": "i=1; a=rsa-sha256; t=1728276603; cv=none;        d=google.com; s=arc-20240605;        b=PE1vVV+BBKntUBm0X8G4K2oDt0C94JW0OtkOHcX2QyhjsxCuIbR9aOsJGLXqhton8g         Nsxno+4gObX34JXhhnTmFlB8uV4uZW8pUqMjjHrHfpEs5Dv5zjGTzWAiewMmdG+bo9oh         NART19i0BuxiK9pRH32qJzrp1lDxPoWejKiQArMi/2+kaJWzyNVib7w9aNGpP0bWhGk8         5RKGCF3IFpvXlctjELx0Z7cLa2eoHMrM82BGFDTm/rFntnFbXQmb1Nq8U0pATdyQU25q         d4TabVSB6lrOmqpAFSSOOTXtO1qRbbN3jMtvyo/nitnpqXIIUzo7JC/E+CZNSGkj0Xnj         zi8w=="
+          },
+          {
+            "name": "ARC-Message-Signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=mime-version:date:content-transfer-encoding:message-id:subject:to         :from;        bh=xO543rFOpZfxs6q7cg6mBcd7t+33jvQ+vQYtPNt0caw=;        fh=oFe+ZuFHSbI9P/pIoxeJFdgyDkWA/lr3IcxwH6xa+Wg=;        b=FOxaTTKvsQrxKuDAO3HFT7TGtVCqJXIjZrDdX4HhpN/UFkilG/oN9rqobOeydCW4pG         ROeJUOuKleslAwkQc0iKro8P5eX6oYieOYM/ZhBMzZPz5ZE5nNmr2tubSq2VHDbh2/lg         HI0xy5w/0CrPvItLZpJo6bDVij0QVUkrM0eWWlfs3og9tNkydfGn0IlyWe3Z+mEuhKLD         cI6SQbbTyBc5zKbsbewvN6J+Tdl08uFE7wUJa1POuaBRUSD6wKKn4KsswTo6gtDihRZZ         Vmrqxlc9ocMGs7hdECk6yS35v/76X87l+oaWyBUghS8YpISHWD0nellvi0MWBs0ZKAPN         Lntg==;        dara=google.com"
+          },
+          {
+            "name": "ARC-Authentication-Results",
+            "value": "i=1; mx.google.com;       spf=softfail (google.com: domain of transitioning cup@water.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=cup@water.com;       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=water.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<cup@water.com>"
+          },
+          {
+            "name": "Received",
+            "value": "from dark-knight.nektar.ai (dark-knight.nektar.ai. [44.216.162.252])        by mx.google.com with ESMTPS id 6a1803df08f44-6cba46d6f93si55146386d6.108.2024.10.06.21.50.03        for <minato@nektar.ai>        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Sun, 06 Oct 2024 21:50:03 -0700 (PDT)"
+          },
+          {
+            "name": "Received-SPF",
+            "value": "softfail (google.com: domain of transitioning cup@water.com does not designate 44.216.162.252 as permitted sender) client-ip=44.216.162.252;"
+          },
+          {
+            "name": "Authentication-Results",
+            "value": "mx.google.com;       spf=softfail (google.com: domain of transitioning cup@water.com does not designate 44.216.162.252 as permitted sender) smtp.mailfrom=cup@water.com;       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=water.com"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "name": "From",
+            "value": "cup@water.com"
+          },
+          {
+            "name": "To",
+            "value": "minato@nektar.ai"
+          },
+          {
+            "name": "Subject",
+            "value": "Cup TESTING ignore email test"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<8fde8f19-1767-e641-7f23-121ed1c4351e@water.com>"
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "7bit"
+          },
+          {
+            "name": "Date",
+            "value": "Mon, 07 Oct 2024 04:50:03 +0000"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          }
+        ],
+        "filename": "",
+        "mimeType": "text/plain"
+      },
+      "snippet": "Hi this is testing thanks cup 1234567890",
+      "subject": "Cup TESTING ignore email test",
+      "labelIds": ["UNREAD", "IMPORTANT", "CATEGORY_PERSONAL", "INBOX"],
+      "threadId": "1926550205adf771",
+      "historyId": "2200110",
+      "internalDate": "1728276603000",
+      "sizeEstimate": 3065
+    }
+  ],
+  "gcal": [
+    {
+      "id": "1rdpq8agqf2p3e3c5ack71bn0v",
+      "end": {
+        "dateTime": "2022-06-11T05:00:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "etag": "\"3310208566362000\"",
+      "kind": "calendar#event",
+      "start": {
+        "dateTime": "2022-06-11T04:00:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "status": "confirmed",
+      "created": "2022-06-13T07:11:23.000Z",
+      "creator": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "iCalUID": "1rdpq8agqf2p3e3c5ack71bn0v@google.com",
+      "summary": "event event",
+      "updated": "2022-06-13T07:11:23.181Z",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MXJkcHE4YWdxZjJwM2UzYzVhY2s3MWJuMHYgbWluYXRvQG5la3RhcnRlc3QucGFnZQ&ctz=Etc/UTC",
+      "sequence": 0,
+      "attendees": [
+        {
+          "email": "aryan-kapoor@cake.com",
+          "responseStatus": "needsAction"
+        },
+        {
+          "self": true,
+          "email": "minato@nektar.ai",
+          "organizer": true,
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "arjun_singh@cake.com",
+          "responseStatus": "needsAction"
+        }
+      ],
+      "eventType": "default",
+      "organizer": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "hangoutLink": "https://meet.google.com/uzn-kmbp-vui",
+      "conferenceData": {
+        "entryPoints": [
+          {
+            "uri": "https://meet.google.com/uzn-kmbp-vui",
+            "label": "meet.google.com/uzn-kmbp-vui",
+            "entryPointType": "video"
+          },
+          {
+            "pin": "9351618712264",
+            "uri": "https://tel.meet/uzn-kmbp-vui?pin=9351618712264",
+            "entryPointType": "more"
+          },
+          {
+            "pin": "771955340",
+            "uri": "tel:+1-413-561-4955",
+            "label": "+1 413-561-4955",
+            "regionCode": "US",
+            "entryPointType": "phone"
+          }
+        ],
+        "conferenceId": "uzn-kmbp-vui",
+        "conferenceSolution": {
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet",
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+        }
+      }
+    },
+    {
+      "id": "7dd2g3epgpiv7dkkd1cnv4of4t",
+      "end": {
+        "dateTime": "2022-08-29T13:30:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "etag": "\"3323494555942000\"",
+      "kind": "calendar#event",
+      "start": {
+        "dateTime": "2022-08-29T12:30:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "status": "confirmed",
+      "created": "2022-08-29T04:27:57.000Z",
+      "creator": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "iCalUID": "7dd2g3epgpiv7dkkd1cnv4of4t@google.com",
+      "summary": "cartoon event single",
+      "updated": "2022-08-29T04:27:57.971Z",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N2RkMmczZXBncGl2N2Rra2QxY252NG9mNHQgbWluYXRvQG5la3RhcnRlc3QucGFnZQ&ctz=Etc/UTC",
+      "sequence": 0,
+      "attendees": [
+        {
+          "email": "kiara-event@cartoon.com",
+          "responseStatus": "needsAction"
+        },
+        {
+          "self": true,
+          "email": "minato@nektar.ai",
+          "organizer": true,
+          "responseStatus": "accepted"
+        }
+      ],
+      "eventType": "default",
+      "organizer": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "hangoutLink": "https://meet.google.com/azy-xwoe-xof",
+      "conferenceData": {
+        "entryPoints": [
+          {
+            "uri": "https://meet.google.com/azy-xwoe-xof",
+            "label": "meet.google.com/azy-xwoe-xof",
+            "entryPointType": "video"
+          },
+          {
+            "pin": "1064962090078",
+            "uri": "https://tel.meet/azy-xwoe-xof?pin=1064962090078",
+            "entryPointType": "more"
+          },
+          {
+            "pin": "717309313",
+            "uri": "tel:+1-224-424-0899",
+            "label": "+1 224-424-0899",
+            "regionCode": "US",
+            "entryPointType": "phone"
+          }
+        ],
+        "conferenceId": "azy-xwoe-xof",
+        "conferenceSolution": {
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet",
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+        }
+      }
+    },
+    {
+      "id": "1a4f24oer8mks2mlm8q9jesgej",
+      "end": {
+        "dateTime": "2022-09-22T07:00:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "etag": "\"3331008828644000\"",
+      "kind": "calendar#event",
+      "start": {
+        "dateTime": "2022-09-22T06:15:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "status": "confirmed",
+      "created": "2022-09-22T06:06:02.000Z",
+      "creator": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "iCalUID": "1a4f24oer8mks2mlm8q9jesgej@google.com",
+      "summary": "SF writer test cases",
+      "updated": "2022-10-11T16:06:54.322Z",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MWE0ZjI0b2VyOG1rczJtbG04cTlqZXNnZWogbWluYXRvQG5la3RhcnRlc3QucGFnZQ&ctz=Etc/UTC",
+      "sequence": 0,
+      "attendees": [
+        {
+          "self": true,
+          "email": "minato@nektar.ai",
+          "organizer": true,
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "daniel@nektar.ai",
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "kushina@nektar.ai",
+          "responseStatus": "declined"
+        }
+      ],
+      "eventType": "default",
+      "organizer": {
+        "self": true,
+        "email": "minato@nektar.ai"
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "hangoutLink": "https://meet.google.com/svh-segi-vjy",
+      "conferenceData": {
+        "entryPoints": [
+          {
+            "uri": "https://meet.google.com/svh-segi-vjy",
+            "label": "meet.google.com/svh-segi-vjy",
+            "entryPointType": "video"
+          },
+          {
+            "pin": "4678081647581",
+            "uri": "https://tel.meet/svh-segi-vjy?pin=4678081647581",
+            "entryPointType": "more"
+          },
+          {
+            "pin": "265837289",
+            "uri": "tel:+1-386-753-7901",
+            "label": "+1 386-753-7901",
+            "regionCode": "US",
+            "entryPointType": "phone"
+          }
+        ],
+        "conferenceId": "svh-segi-vjy",
+        "conferenceSolution": {
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet",
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+        }
+      }
+    }
+  ]
+}
