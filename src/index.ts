@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import gmailRoutes from './routes/gmailRoutes';
 import calendarRoutes from './routes/calendarRoutes';
+import contactRoutes from './routes/contactRoutes';
 import { GmailMessage, CalendarEvent } from './types';
 
 const app = express();
@@ -45,6 +46,7 @@ app.get('/', (req, res) => {
       '/api/gmail/:id': 'Get a specific Gmail message by ID',
       '/api/calendar': 'Access Calendar-related data with pagination (limit & offset)',
       '/api/calendar/:id': 'Get a specific Calendar event by ID',
+      '/api/contact': 'Extracts all contacts from the given email messages and calendar events.',
     },
     note: 'Use these endpoints to retrieve specific information. Refer to the documentation for more details.',
   });
@@ -53,9 +55,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/gmail', gmailRoutes);
 app.use('/api/calendar', calendarRoutes);
-
-// Add more routes here
-// ...
+app.use('/api/contact', contactRoutes);
 
 // Error handling
 app.use((err: Error, req: express.Request, res: express.Response) => {

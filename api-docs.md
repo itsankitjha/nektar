@@ -166,4 +166,48 @@ Example Response:
 }
 ```
 
+### Contact Endpoints
+
+##### `GET /api/contact`
+
+Extracts all contacts from the given email messages and calendar events. De-duplicates them.
+
+Query parameters:
+
+- `limit` (optional): Number of contacts to return (default: 10)
+- `offset` (optional): Number of contacts to skip (default: 0)
+- `ignoreDomains` (optional): Comma-separated list of domains to ignore.
+- `blockDomains` (optional): Comma-separated list of domains to block.
+
+Example Request:
+
+```bash
+curl -X GET 'http://localhost:3000/api/contact?limit=5&offset=0
+```
+
+Example Response:
+
+```json
+{
+  "data": [
+    {
+      "email": "razan@vinaora.com",
+      "firstName": "razan",
+      "lastName": "",
+      "domain": "vinaora.com"
+    },
+    {
+      "email": "nam@metro.com",
+      "firstName": "nam",
+      "lastName": "",
+      "domain": "metro.com"
+    }
+    // More contacts
+  ],
+  "total": 5,
+  "limit": 5,
+  "offset": 0
+}
+```
+
 ---
