@@ -13,6 +13,7 @@ router.get('/', (req: Request, res: Response) => {
   // Extract contacts from Gmail messages
   const contacts: Contact[] = [];
 
+  // From Gmail messages
   testData.gmail.forEach((message: { payload: { headers: { name: string; value: string }[] } }) => {
     const fromHeader = message.payload.headers.find(
       (header: { name: string; value: string }) => header.name === 'From'
@@ -31,6 +32,36 @@ router.get('/', (req: Request, res: Response) => {
       }
     }
   });
+
+  // From Calendar events
+  testData.gcal.forEach(
+    (event: { creator: { email: string }; attendees: Array<{ email: string }> }) => {
+      // Add creator
+      if (event.creator.email) {
+        const emailParts = event.creator.email.split('@');
+        const [firstName, lastName] = emailParts[0].split('.');
+        const domain = emailParts[1];
+        contacts.push({
+          email: event.creator.email,
+          firstName: firstName || '',
+          lastName: lastName || '',
+          domain,
+        });
+      }
+      // Add attendees
+      event.attendees?.forEach((attendee) => {
+        const emailParts = attendee.email.split('@');
+        const [firstName, lastName] = emailParts[0].split('.');
+        const domain = emailParts[1];
+        contacts.push({
+          email: attendee.email,
+          firstName: firstName || '',
+          lastName: lastName || '',
+          domain,
+        });
+      });
+    }
+  );
 
   // Remove duplicates based on email
   let uniqueContacts = Array.from(
