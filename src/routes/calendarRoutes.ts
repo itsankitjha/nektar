@@ -7,11 +7,19 @@ router.get('/', (req, res) => {
   const testData = req.app.locals.testData;
   const limit = parseInt(req.query.limit as string) || 10;
   const offset = parseInt(req.query.offset as string) || 0;
+  const sort = (req.query.sort as string) || 'start.dateTime';
 
-  const paginatedData = testData.gcal.slice(offset, offset + limit);
+  const sortedData = [...testData.gcal].sort((a, b) => {
+    if (sort === 'start.dateTime') {
+      return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime();
+    }
+    return 0; // Default case if sort field is not recognized
+  });
+
+  const paginatedData = sortedData.slice(offset, offset + limit);
   const response: PaginatedResponse<CalendarEvent> = {
     data: paginatedData,
-    total: testData.gcal.length,
+    total: sortedData.length,
     limit,
     offset,
   };

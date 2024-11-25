@@ -7,11 +7,19 @@ router.get('/', (req, res) => {
   const testData = req.app.locals.testData;
   const limit = parseInt(req.query.limit as string) || 10;
   const offset = parseInt(req.query.offset as string) || 0;
+  const sort = (req.query.sort as string) || 'internalDate';
 
-  const paginatedData = testData.gmail.slice(offset, offset + limit);
+  const sortedData = [...testData.gmail].sort((a, b) => {
+    if (sort === 'internalDate') {
+      return Number(a.internalDate) - Number(b.internalDate);
+    }
+    return 0; // Default case if sort field is not recognized
+  });
+
+  const paginatedData = sortedData.slice(offset, offset + limit);
   const response: PaginatedResponse<GmailMessage> = {
     data: paginatedData,
-    total: testData.gmail.length,
+    total: sortedData.length,
     limit,
     offset,
   };

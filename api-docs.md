@@ -12,11 +12,12 @@ Query parameters:
 
 - `limit` (optional): Number of messages to return (default: 10)
 - `offset` (optional): Number of messages to skip (default: 0)
+- `sort` (optional): Field to sort by (default: `internalDate`)
 
 Example Request:
 
 ```bash
-curl -X GET 'http://localhost:3000/api/gmail?limit=5&offset=0
+curl -X GET 'http://localhost:3000/api/gmail?limit=5&offset=0&sort=internalDate'
 ```
 
 Example Response:
@@ -45,7 +46,8 @@ Example Response:
   ],
   "total": 100,
   "limit": 5,
-  "offset": 0
+  "offset": 0,
+  "sort": "internalDate"
 }
 ```
 
@@ -133,11 +135,12 @@ Query parameters:
 
 - `limit` (optional): Number of events to return (default: 10)
 - `offset` (optional): Number of events to skip (default: 0)
+- `sort` (optional): Field to sort by (default: `start.dateTime`)
 
 Example Request:
 
 ```bash
-curl -X GET 'http://localhost:3000/api/calendar?limit=5&offset=0'
+curl -X GET 'http://localhost:3000/api/calendar?limit=5&offset=0&sort=start.dateTime'
 ```
 
 Example Response:
