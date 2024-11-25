@@ -206,6 +206,48 @@ Example Response:
 }
 ```
 
+##### `GET /api/calendar/:contact-email`
+
+Returns the calendar events for the given contact email.
+
+Example Request:
+
+```bash
+curl -X GET 'http://localhost:3000/api/calendar/aryan-kapoor@cake.com'
+```
+
+Example Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "1rdpq8agqf2p3e3c5ack71bn0v",
+      "start": {
+        "dateTime": "2022-06-11T05:00:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "end": {
+        "dateTime": "2022-06-11T06:00:00Z",
+        "timeZone": "Asia/Kolkata"
+      },
+      "creator": {
+        "email": "minato@nektar.ai"
+      },
+      "attendees": [
+        {
+          "email": "aryan-kapoor@cake.com"
+        }
+      ]
+    }
+    // More events
+  ],
+  "total": 1,
+  "limit": 1,
+  "offset": 0
+}
+```
+
 ### Contact Endpoints
 
 ##### `GET /api/contact`

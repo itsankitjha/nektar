@@ -1,5 +1,6 @@
 import express from 'express';
-import { CalendarEvent, PaginatedResponse, SingleItemResponse } from '../types';
+import { CalendarEvent, PaginatedResponse } from '../types';
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -17,16 +18,27 @@ router.get('/', (req, res) => {
   res.json(response);
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:email', (req, res) => {
   const testData = req.app.locals.testData;
-  const event = testData.gcal.find((e: CalendarEvent) => e.id === req.params.id);
+  const email = req.params.email;
 
-  if (!event) {
-    return res.status(404).json({ error: 'Event not found' });
+  // Filter events by the given email
+  const filteredEvents = testData.gcal.filter((event: CalendarEvent) => {
+    return (
+      event.creator?.email === email ||
+      event.attendees?.some((attendee) => attendee.email === email)
+    );
+  });
+
+  if (filteredEvents.length === 0) {
+    return res.status(404).json({ error: 'No events found for this contact.' });
   }
 
-  const response: SingleItemResponse<CalendarEvent> = {
-    data: event,
+  const response: PaginatedResponse<CalendarEvent> = {
+    data: filteredEvents,
+    total: filteredEvents.length,
+    limit: filteredEvents.length,
+    offset: 0,
   };
   res.json(response);
 });
