@@ -1,5 +1,6 @@
 import express from 'express';
-import { GmailMessage, PaginatedResponse, SingleItemResponse } from '../types';
+import { GmailMessage, PaginatedResponse } from '../types';
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -17,16 +18,24 @@ router.get('/', (req, res) => {
   res.json(response);
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:email', (req, res) => {
   const testData = req.app.locals.testData;
-  const message = testData.gmail.find((m: GmailMessage) => m.id === req.params.id);
+  const email = req.params.email;
+  // Filter messages by the given email
+  const filteredMessages = testData.gmail.filter((message: GmailMessage) => {
+    const fromHeader = message.payload.headers.find((header) => header.name === 'From');
+    return fromHeader && fromHeader.value === email;
+  });
 
-  if (!message) {
-    return res.status(404).json({ error: 'Message not found' });
+  if (filteredMessages.length === 0) {
+    return res.status(404).json({ error: 'No messages found for this contact.' });
   }
 
-  const response: SingleItemResponse<GmailMessage> = {
-    data: message,
+  const response: PaginatedResponse<GmailMessage> = {
+    data: filteredMessages,
+    total: filteredMessages.length,
+    limit: filteredMessages.length,
+    offset: 0,
   };
   res.json(response);
 });

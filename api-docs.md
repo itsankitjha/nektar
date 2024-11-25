@@ -83,6 +83,46 @@ Example Response:
 }
 ```
 
+##### `GET /api/gmail/:contact-email`
+
+Returns the email messages for the given contact email.
+
+Example Request:
+
+```bash
+curl -X GET 'http://localhost:3000/api/gmail/razan@vinaora.com'
+```
+
+Example Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "msg123",
+      "payload": {
+        "body": {
+          "data": "Email content",
+          "size": 1024
+        },
+        "partId": "0",
+        "headers": [
+          {
+            "name": "From",
+            "value": "razan@vinaora.com"
+          }
+        ]
+      },
+      "internalDate": "2023-12-01T10:00:00Z"
+    }
+    // More messages
+  ],
+  "total": 1,
+  "limit": 1,
+  "offset": 0
+}
+```
+
 ### Calendar Endpoints
 
 ##### `GET /api/calendar`
