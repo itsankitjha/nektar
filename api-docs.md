@@ -210,4 +210,27 @@ Example Response:
 }
 ```
 
+##### `GET /api/contact/:contact-email`
+
+Returns the contact with the given email address.
+
+Example Request:
+
+```bash
+curl -X GET 'http://localhost:3000/api/contact/razan@vinaora.com'
+```
+
+Example Response:
+
+```json
+{
+  "data": {
+    "email": "razan@vinaora.com",
+    "firstName": "razan",
+    "lastName": "",
+    "domain": "vinaora.com"
+  }
+}
+```
+
 ---
